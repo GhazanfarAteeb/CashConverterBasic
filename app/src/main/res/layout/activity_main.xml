@@ -22,59 +22,66 @@
 		android:hint="Enter Value to Convert"
 		android:importantForAutofill="no"
 		android:inputType="numberDecimal" />
-	<RadioGroup
-		android:id="@+id/rg_convert_from"
-		android:layout_marginStart="50dp"
-		android:layout_alignParentStart="true"
-		android:orientation="vertical"
-		android:layout_below="@id/et_value"
-		android:layout_width="wrap_content"
+	<LinearLayout
+		android:id="@+id/ll_conversions"
+		android:gravity="center"
+		android:layout_below="@+id/et_value"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content">
-		<RadioButton
+		<RadioGroup
+			android:id="@+id/rg_convert_from"
+			android:orientation="vertical"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="€"
-			android:id="@+id/rb_euro"/>
-		<RadioButton
+			android:layout_height="wrap_content">
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="€"
+				android:id="@+id/rb_euro"/>
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="US$"
+				android:id="@+id/rb_us_dollars"/>
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="RMB"
+				android:id="@+id/rb_rmb"/>
+		</RadioGroup>
+		<ImageView
+			android:layout_marginStart="25dp"
+			android:layout_marginEnd="25dp"
+			android:layout_width="75dp"
+			android:layout_height="75dp"
+			android:src="@drawable/ic_baseline_arrow_forward_24"/>
+		<RadioGroup
+			android:id="@+id/rg_convert_to"
+			android:orientation="vertical"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="US$"
-			android:id="@+id/rb_us_dollars"/>
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="RMB"
-			android:id="@+id/rb_rmb"/>
-	</RadioGroup>
-	<RadioGroup
-		android:id="@+id/rg_convert_to"
-		android:layout_marginEnd="50dp"
-		android:layout_alignParentEnd="true"
-		android:orientation="vertical"
-		android:layout_below="@id/et_value"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content">
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="€"
-			android:id="@+id/rb_euro2"/>
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="US$"
-			android:id="@+id/rb_us_dollars2" />
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="RMB"
-			android:id="@+id/rb_rmb2" />
-	</RadioGroup>
+			android:layout_height="wrap_content">
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="€"
+				android:id="@+id/rb_euro2"/>
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="US$"
+				android:id="@+id/rb_us_dollars2" />
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="RMB"
+				android:id="@+id/rb_rmb2" />
+		</RadioGroup>
+	</LinearLayout>
 	<Button
 		android:id="@+id/btn_convert"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@id/rg_convert_from"
+		android:layout_below="@id/ll_conversions"
 		android:layout_centerHorizontal="true"
 		android:layout_marginTop="20dp"
 		android:text="Convert" />
